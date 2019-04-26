@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 mongoose.set('useFindAndModify', false);
-mongoose.connect('mongodb://localhost:27017/database-app', {
+mongoose.connect('mongodb://john2306:qazwsx,.-UNI2014@ds147446.mlab.com:47446/node-notes-db', {
   useCreateIndex: true,
   useNewUrlParser: true
 })
