@@ -1,21 +1,21 @@
 <div class="row">
   <div class="col-md-4 mx-auto">
     <div class="card mt-4 text-center">
-      <div class="card-header">
+      <div class="card-header" id="tituloCard">
         <h1 class="h4">
-          Account Login
+          Ingresar cuenta
         </h1>
       </div>
         <img class="rounded-circle mx-auto d-block logo m-4" src="/img/logo.jpg" alt="Logo">
       <div class="card-body">
         <form action="/users/signin" method="POST">
           <div class="form-group">
-            <input type="email" class="form-control" name="email" placeholder="Email" autofocus autocomplete="off">
+            <input type="email" id="email" class="form-control" name="email" placeholder="Email" autofocus autocomplete="off">
           </div>
           <div class="form-group">
-            <input type="password" class="form-control" name="password" placeholder="Password">
+            <input type="password" id="pwd" class="form-control" name="password" placeholder="Password">
           </div>
-          <button class="btn btn-primary btn-block">
+          <button id="bottonForm" class="btn btn-primary btn-block">
             Signin 
           </button>
         </form>
@@ -23,3 +23,56 @@
     </div>
   </div>
 </div>
+
+<style>
+   #tituloCard {
+            border: 1px solid #01b7ee;
+            background: #01b7ee;
+            color: #040505;
+            font-size: 23px;
+            margin-bottom: 0%;
+        }
+
+      #login {
+            background-color: #01b7ee;
+            color: #040505;
+            border-radius: 3px;
+            padding: 0.5rem;
+            font-size: 15px;
+        }
+
+        #login:hover {
+            background-color: #0ced67;
+        }
+
+        .card {
+            text-align: center;
+            background: #ffffff;
+            color: #040505;
+            border-radius: 5px;
+            border: solid 1px #01b7ee;
+            margin-top: 20px;
+        }
+
+        #bottonForm {
+            background-color: #01b7ee;
+            color: #ffffff;
+            padding: 10px;
+            margin-bottom: 20px;
+            font-size: 16px;
+            border-radius: 3px;
+        }
+
+         #email {
+            padding: 22px;
+            border: solid 1px #01b7ee;
+            border-radius: 3px;
+        }
+
+        #pwd {
+            padding: 22px;
+            border: solid 1px #01b7ee;
+            margin-bottom: 20px;
+            border-radius: 3px;
+        }
+</style>

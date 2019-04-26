@@ -11,11 +11,15 @@ router.get('/users/signup', (req, res) => {
 router.post('/users/signup', async (req, res) => {
   let errors = [];
   const { name, email, password, confirm_password } = req.body;
+
+  if(name.length == 0) {
+    errors.push({text: 'Ingrese un nombre.'});
+  }
   if(password != confirm_password) {
     errors.push({text: 'Passwords do not match.'});
   }
-  if(password.length < 4) {
-    errors.push({text: 'Passwords must be at least 4 characters.'})
+  if(password.length < 8) {
+    errors.push({text: 'Passwords must be at least 8 characters.'})
   }
   if(errors.length > 0){
     res.render('users/signup', {errors, name, email, password, confirm_password});
