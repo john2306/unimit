@@ -13,7 +13,7 @@
         <!-- DELETE REQUEST -->
         <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
           <input type="hidden" name="_method" value="DELETE">
-          <button type="submit" class="btn btn-danger btn-block btn-sm">Delete</button>
+          <button type="submit" class="btn btn-danger btn-block btn-sm">Eliminar</button>
         </form>
       </div>
     </div>
@@ -22,7 +22,7 @@
   <div class="card mx-auto">
     <div class="card-body">
       <h1>Hola {{user.name}}</h1>
-      <p clsss="lead">There are not Notes yet.</p>
+      <p clsss="lead">Todavía no tienes notas.</p>
       <a href="/notes/add" class="btn btn-success btn-block">Crear Uno!</a>
     </div>
   </div>
