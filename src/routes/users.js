@@ -52,7 +52,7 @@ router.post('/users/signin', passport.authenticate('local', {
 
 router.get('/users/logout', (req, res) => {
   req.logout();
-  req.flash('success_msg', 'Has salido exitosamente de la plataforma. Regresa pronto.');
+  //req.flash('success_msg', 'Regresa pronto.');
   res.redirect('/users/signin');
 });
 

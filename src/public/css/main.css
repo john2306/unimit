@@ -1,22 +1,32 @@
+
 body {
   background: #11998e;  /* fallback for old browsers */
   background: -webkit-linear-gradient(to right, #38ef7d, #11998e);  /* Chrome 10-25, Safari 5.1-6 */
   background: linear-gradient(to right, #38ef7d, #11998e); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-.logo {
-  width: 30%;
-}
-
-footer {
-  text-align: center;
-  font-family: sans-serif;
-  color: #1d2922;
-  width: 100%;
-  bottom: 0;
-  position:fixed;
-}
-
 #linkPage{
   color: #01b7ee;
+}
+
+#login {
+  background-color: #01b7ee;
+  color: #040505;
+  border-radius: 3px;
+  padding: 0.5rem;
+  font-size: 15px;
+}
+
+#login:hover {
+  background-color: #0ced67;
+}
+
+.card {
+  text-align: center;
+  background: #ffffff;
+  color: #040505;
+  border-radius: 5px;
+  border: solid 1px #01b7ee;
+  font-family: 'Open Sans', sans-serif;
+  margin-top: 20px;
 }
