@@ -6,28 +6,27 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>IAnalytics</title>
   <!--Bootstrap 4.0-->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous"
   <!-- FONT AWESOME -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-
     <!-- Font Awesome ICONOS-->
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-    
     <!-- CUSTOM CSS -->
     <link rel="stylesheet" href="/css/main.css">
 
 </head>
 <body>
-  {{> navigation }}
+    {{> navigation }}
+
     <div class="container">
       {{> messages }}
-    {{> errors }}
+      {{> errors }}
     </div>
-    
-     <div class="container p-5">
-       {{{ body }}}
-     </div>
+  
+    <div class="container-fluid">
+      {{{ body }}}
+    </div>
+     
     {{> footer}}
 
 
