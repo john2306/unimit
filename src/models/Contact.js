@@ -1,52 +1,32 @@
-const express = require('express');
-const router = express.Router();
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
-// Models
-const Contact = require('../models/Contact');
-
-// Helpers
-const { isAuthenticated } = require('../helpers/auth');
-
-// New Note
-router.get('/contacts/add', (req, res) => {
-  res.render('notes/new-note');
-});
-
-router.post('/contacts/add', async (req, res) => {
-  const { name, email, phone, subject, message } = req.body;
-  const errors = [];
-  if (!name) {
-    errors.push({text: 'Escriba su nombre.'});
-  }
-  if (!email) {
-    errors.push({text: 'Escriba su email.'});
-  }
-  if (!phone) {
-    errors.push({text: 'Ingrese su número de teléfono celular.'});
-  } else if(phone.length>=10 || phone.length <=8){
-    errors.push({text: 'Ingrese correctamente el número de su teléfono celular.'});
-  }
-  if (!subject) {
-    errors.push({text: 'Agregar el asunto.'});
-  }
-  if (!message) {
-    errors.push({text: 'Agregar el mensaje.'});
-  }
-  if (errors.length > 0) {
-    res.render('index', {
-      errors,
-      name,
-      email,
-      phone,
-      subject,
-      message
-    });
-  } else {
-    const newContact = new Contact({name, email, phone, subject, message});
-    await newContact.save();
-    req.flash('success_msg', 'Mensaje enviado, nos comunicaremos pronto!');
-    res.redirect('/');
+const ContactSchema = new Schema({
+  
+  name: {
+    type: String,
+    required: true
+  },
+  email: {
+    type: String,
+    required: true
+  },
+  phone: {
+    type: Number,
+    required: true
+  },
+  subject: {
+    type: String,
+    required: true
+  },
+  message: {
+    type: String,
+    required: true
+  },
+  date: {
+    type: Date,
+    default: Date.now
   }
 });
 
-module.exports = router;
+module.exports = mongoose.model('Contact', ContactSchema);

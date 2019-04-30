@@ -9,7 +9,7 @@ const { isAuthenticated } = require('../helpers/auth');
 
 // New Note
 router.get('/contacts/add', (req, res) => {
-  res.render('index');
+  res.redirect('/');
 });
 
 router.post('/contacts/add', async (req, res) => {
@@ -45,7 +45,7 @@ router.post('/contacts/add', async (req, res) => {
     const newContact = new Contact({name, email, phone, subject, message});
     await newContact.save();
     req.flash('success_msg', 'Mensaje enviado, nos comunicaremos pronto!');
-    res.redirect('/');
+    res.render('contact');
   }
 });
 
