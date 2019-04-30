@@ -8,6 +8,16 @@ router.get('/users/signup', (req, res) => {
   res.render('users/signup');
 });
 
+router.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));
+
+router.get('/auth/google/callback', 
+  passport.authenticate('google', { failureRedirect: '/users/signup' }),
+  function(req, res) {
+    // Successful authentication, redirect home.
+    res.redirect('/notes');
+  });
+
+
 router.post('/users/signup', async (req, res) => {
   let errors = [];
   const { name, email, password, confirm_password } = req.body;

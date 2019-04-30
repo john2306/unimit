@@ -1,28 +1,12 @@
-
 <!-- Start About -->
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-7 mx-auto">
-                                        <div class="card">
-                                                <img src="/img/industry4.png" alt="Industria 4.0" width="100%" height="auto">
-                                        </div>
-                                        <hr>
-                                        <div class="card">
-                                                <a id="linkPage" href="http://ianalytics-data.com" target="_blank"><h3>IAnalytics Corporation</h3></a>
-                                                <p>
-                                                    Plataforma para conectar a las empresas, gobierno, universidades y la población. <br>
-                                                    
-                                                    <br>
-                                                    <b>-</b> John Mendoza | Founder
-                                                </p>
-                                        </div>
-
-                                    </div>
-                                
-                                    <div class="col-md-5">
+                            <div class="container text-center mt-3" id="about">
+                             <div class="row">
+                                 <div class="col-md-4"></div>
+                             
+                                    <div class="col-md-4">
                                         <div class="card">
                                             <div  id="tituloCard" class="card-header">
-                                                <label>Crea tu cuenta</label>
+                                                <label>Agregar Admin Morado</label>
                                             </div>
                                             <div id="description_card">
                                                 <small>No compartiremos nada sin su permiso.</small>
@@ -60,7 +44,7 @@
                                                          <div class="form-group">
                                                             <input type="password" id="pwd" class="form-control" name="confirm_password" placeholder="Confirm Password*" value="{{confirm_password}}">
                                                         </div>
-                                                        <button id="bottonForm" class="btn btn-block">Regístrese Gratis</i>
+                                                        <button id="bottonForm" class="btn btn-block">Registrar</i>
                                                         </button>
                                                     </form>
                                                 </div>
@@ -70,34 +54,36 @@
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="col-md-4"></div>
+                                    </div>
                                 </div>
-                            </div>
-
+                                {{> messages }}
       
         <!-- End About -->
 
           <style>
 
         #buttonForm {
-            border: solid 1px #01b7ee;
-            color: #01b7ee;
+            border: solid 1px #25bafc;
+            color: #25bafc;
             margin: 5px;
             padding: 10px;
             border-radius: 3px;
         }
 
         #buttonForm:hover {
-            border: solid 1px #01b7ee;
+            border: solid 1px #25bafc;
             color: #fdfeff;
-            background-color: #01b7ee;
+            background-color: #25bafc;
         }
 
         #tituloCard {
             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            background: #01b7ee;
+            background: #25bafc;
             color: #040505;
             font-size: 23px;
             margin-bottom: 0%;
+            border: 1px solid #25bafc;
         }
 
         #tituloCard1 {
@@ -105,28 +91,24 @@
         }
 
         #description_card {
-            margin-bottom: 20px;
-        }
-
-        #socialForm {
-            margin-bottom: 20px;
+            margin-bottom: 5px;
         }
 
         #email {
-            padding: 22px;
-            border: solid 1px #01b7ee;
+            padding: 10px;
+            border: solid 1px #25bafc;
             border-radius: 3px;
         }
 
         #pwd {
-            padding: 22px;
-            border: solid 1px #01b7ee;
+            padding: 10px;
+            border: solid 1px #25bafc;
             margin-bottom: 20px;
             border-radius: 3px;
         }
 
         #bottonForm {
-            background-color: #01b7ee;
+            background-color: #25bafc;
             color: #ffffff;
             padding: 15px;
             margin-bottom: 40px;
@@ -136,5 +118,6 @@
 
         label {
             font-family: 'Open Sans', sans-serif;
+            color: #ffffff;
         }
     </style>
