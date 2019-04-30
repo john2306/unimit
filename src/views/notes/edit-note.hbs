@@ -9,6 +9,10 @@
 
 <div class="col-md-4 mx-auto">
   <div class="card">
+    <div class="container">
+      {{> errors }}
+      {{> messages }}
+  </div>
     <div class="card-header">
       <h3>Editar Nota</h3>
     </div>
@@ -31,7 +35,3 @@
   </div>
 </div>
 
-<div class="container">
-      {{> errors }}
-      {{> messages }}
-  </div>

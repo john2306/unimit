@@ -16,10 +16,10 @@ router.post('/notes/new-note', isAuthenticated, async (req, res) => {
   const { title, description } = req.body;
   const errors = [];
   if (!title) {
-    errors.push({text: 'Please Write a Title.'});
+    errors.push({text: 'Escribir un título.'});
   }
   if (!description) {
-    errors.push({text: 'Please Write a Description'});
+    errors.push({text: 'Escribir una descripción'});
   }
   if (errors.length > 0) {
     res.render('notes/new-note', {
@@ -31,7 +31,7 @@ router.post('/notes/new-note', isAuthenticated, async (req, res) => {
     const newNote = new Note({title, description});
     newNote.user = req.user.id;
     await newNote.save();
-    req.flash('success_msg', 'Note Added Successfully');
+    req.flash('success_msg', 'Nota añadida exitosamente');
     res.redirect('/notes');
   }
 });
@@ -46,7 +46,7 @@ router.get('/notes', isAuthenticated, async (req, res) => {
 router.get('/notes/edit/:id', isAuthenticated, async (req, res) => {
   const note = await Note.findById(req.params.id);
   if(note.user != req.user.id) {
-    req.flash('error_msg', 'Not Authorized');
+    req.flash('error_msg', 'No Autorizado');
     return res.redirect('/notes');
   } 
   res.render('notes/edit-note', { note });
@@ -55,14 +55,14 @@ router.get('/notes/edit/:id', isAuthenticated, async (req, res) => {
 router.put('/notes/edit-note/:id', isAuthenticated, async (req, res) => {
   const { title, description } = req.body;
   await Note.findByIdAndUpdate(req.params.id, {title, description});
-  req.flash('success_msg', 'Note Updated Successfully');
+  req.flash('success_msg', 'Nota actualizado satisfactoriamente');
   res.redirect('/notes');
 });
 
 // Delete Notes
 router.delete('/notes/delete/:id', isAuthenticated, async (req, res) => {
   await Note.findByIdAndDelete(req.params.id);
-  req.flash('success_msg', 'Note Deleted Successfully');
+  req.flash('success_msg', 'Nota eliminado satisfactoriamente');
   res.redirect('/notes');
 });
 
