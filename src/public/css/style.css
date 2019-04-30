@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   line-height: 1.55;
-  color: #25bafc;
+  color: #333c87;
   font-size: 400;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
 }
@@ -52,7 +52,7 @@ a {
 }
 
 .btn:hover {
-  background-color: #25bafc;
+  background-color: #333c87;
   color: #fff;
 }
 
@@ -67,7 +67,7 @@ a {
 
 .btn-ghost:hover {
   background-color: #fff;
-  color: #25bafc;
+  color: #333c87;
 }
 
 section {
@@ -95,7 +95,7 @@ a:hover {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: #25bafc;
+  background: #333c87;
   color: #fff;
   text-align: center;
   font-size: 24px;
@@ -164,7 +164,7 @@ a:hover {
   Header Styling
 ================================================== */
 #header {
-  background: #25bafc;
+  background: #333c87;
   height: 70px;
 }
 
@@ -325,7 +325,7 @@ a:hover {
 }
 
 .nav-menu ul li:hover {
-  background: #25bafc;
+  background: #333c87;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -431,11 +431,11 @@ a:hover {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #25bafc;
+  color: #333c87;
 }
 
 #mobile-nav ul .menu-item-active {
-  color: #25bafc;
+  color: #333c87;
 }
 
 #mobile-body-overly {
