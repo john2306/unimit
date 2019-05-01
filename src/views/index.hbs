@@ -1,47 +1,157 @@
-  <!-- About -->
-  <section class="about" id="about">
-    <div class="container text-center">
-      <h2 style="color:#25bafc">
-          ChallengeX
-        </h2>
-
-      <p>
-        <b>ChallengeX:</b> es la red más grande de <b>ACADÉMICOS</b>, miembros de los <b>GOBIERNOS</b>, 
-        líderes de <b>EMPRESAS</b> y <b>COMUNIDADES</b> que buscan dar solución 
-        a las problemáticas más desafiantes y apremiantes del <b>MUNDO.</b> 
-      </p>
-
-      <div class="row stats-row">
-        <div class="stats-col text-center col-md-3 col-sm-6">
-          <div class="circle">
-            <span class="stats-no" data-toggle="counter-up">2,432</span> DESAFÍOS
-          </div>
+<!-- Start SIGNUP -->
+<div class="container text-center mt-3" id="login">
+  <div>
+    {{> errors }}
+    {{> messages }}
+  </div>
+  <div class="row">
+    <div class="col-md-4">
+      <div class="card text-center">
+        <div id="tituloCard" class="card-header">
+          <label>ChallengeX</label>
         </div>
-
-        <div class="stats-col text-center col-md-3 col-sm-6">
-          <div class="circle">
-            <span class="stats-no" data-toggle="counter-up">64,223</span> ACADÉMICOS Y DEL GOBIERNO
-          </div>
+        <div id="description_card">
+          <small><span>Repositorio de problemáticas reales del <b>MUNDO</b></span></small>
         </div>
-
-        <div class="stats-col text-center col-md-3 col-sm-6">
-          <div class="circle">
-            <span class="stats-no" data-toggle="counter-up">2,463</span> LÍDERES DE EMPRESAS
-          </div>
+        <div class="card-body">
+          <img src="img/computer.png" alt="computer" srcset="" width="100%" height="auto">
         </div>
+        <h4>Constribuyendo al desarrollo de una sociedad más justa y equitativa</h4>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card text-center">
+        <div id="tituloCard" class="card-header">
+          <label>Ingresar cuenta</label>
+        </div>
+        <div id="description_card">
+          <small><span>Si ha olvidado su <a href="#" style="color:#0886bd"><b>Contraseña</b></a></span></small>
+        </div>
+        <img class="mx-auto d-block logo m-4" src="/img/logo.png" alt="Logo">
+        <div class="card-body">
+          <form action="/users/signin" method="POST">
+            <div class="form-group">
+              <input type="email" id="email" class="form-control" name="email" placeholder="Email"
+                autocomplete="off" id="campo"
+                onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toLowerCase()">
+            </div>
+            <div class="form-group">
+              <input type="password" id="pwd" class="form-control" name="password" placeholder="Password">
+            </div>
+            <button id="bottonForm" class="btn btn-primary btn-block">
+              Ingresar
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div id="tituloCard" class="card-header">
+          <label>Crear cuenta</label>
+        </div>
+        <div id="description_card">
+          <small>No compartiremos nada sin su permiso.</small>
+        </div>
+        <div id="socialForm">
+          <a id="buttonForm" class="btn" href="#">Google
+            <i class="fa fa-google"></i>
+          </a>
+          <a id="buttonForm" class="btn" href="#">Facebook
+            <i class="fa fa-facebook"></i>
+          </a>
+          <a id="buttonForm" class="btn" href="#">Linkedin
+            <i class="fa fa-linkedin"></i>
+          </a>
+        </div>
+        <div id="tituloCard1">
+          <label>Cree manualmente una cuenta.</label>
+          <label>*Requerido</label>
+        </div>
+        <div class="row">
+          <div class="col-md-1">
 
-        <div class="stats-col text-center col-md-3 col-sm-6">
-          <div class="circle">
-            <span class="stats-no" data-toggle="counter-up">5,643</span> LÍDERES DE COMUNIDADES
+          </div>
+          <div class="col-md-10">
+            <form action="/users/signup" method="POST">
+              <div class="form-group">
+                <input type="text" id="email" class="form-control" name="name" placeholder="Name*" value="{{name}}"
+                  autocomplete="off">
+              </div>
+              <div class="form-group">
+                <input type="email" id="email" class="form-control" name="email" placeholder="Email*" value="{{email}}"
+                  autocomplete="off" id="campo"
+                  onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toLowerCase()">
+              </div>
+              <div class="form-group">
+                <input type="password" id="pwd" class="form-control" name="password" placeholder="Password*"
+                  value="{{password}}">
+              </div>
+              <div class="form-group">
+                <input type="password" id="pwd" class="form-control" name="confirm_password"
+                  placeholder="Confirm Password*" value="{{confirm_password}}">
+              </div>
+              <button id="bottonForm" class="btn btn-block">Registrar</i>
+              </button>
+            </form>
+          </div>
+          <div class="col-md-1">
+
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <!-- /About -->
-  <!-- Parallax -->
 
-  <!--
+  </div>
+</div>
+<!-- END SIGNUP -->
+
+
+
+<!-- About -->
+<section class="about" id="about">
+  <div class="container text-center">
+    <h2 style="color:#0886bd">
+      ChallengeX
+    </h2>
+
+    <p>
+      <b>ChallengeX:</b> es la plataforma web con la red más grande de <b>ACADÉMICOS</b>, miembros del <b>GOBIERNO</b>,
+      líderes de <b>EMPRESAS</b> y <b>COMUNIDADES</b> que buscan dar solución
+      a las problemáticas más desafiantes y apremiantes del <b>MUNDO.</b>
+    </p>
+
+    <div class="row stats-row">
+      <div class="stats-col text-center col-md-3 col-sm-6">
+        <div class="circle">
+          <span class="stats-no" data-toggle="counter-up">2,432</span> DESAFÍOS
+        </div>
+      </div>
+
+      <div class="stats-col text-center col-md-3 col-sm-6">
+        <div class="circle">
+          <span class="stats-no" data-toggle="counter-up">64,223</span> ACADÉMICOS Y DEL GOBIERNO
+        </div>
+      </div>
+
+      <div class="stats-col text-center col-md-3 col-sm-6">
+        <div class="circle">
+          <span class="stats-no" data-toggle="counter-up">2,463</span> LÍDERES DE EMPRESAS
+        </div>
+      </div>
+
+      <div class="stats-col text-center col-md-3 col-sm-6">
+        <div class="circle">
+          <span class="stats-no" data-toggle="counter-up">5,643</span> LÍDERES DE COMUNIDADES
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /About -->
+<!-- Parallax -->
+
+<!--
     <div class="block bg-primary block-pd-lg block-bg-overlay text-center" data-bg-img="img/parallax-bg.jpg" data-settings='{"stellar-background-ratio": 0.6}' data-toggle="parallax-bg">
     <h2>
         Welcome to a perfect theme
@@ -53,144 +163,144 @@
     <img alt="Bell - A perfect theme" class="gadgets-img hidden-md-down" src="img/gadgets.png">
   </div>
   -->
-  <!-- /Parallax -->
-  <!-- Features -->
+<!-- /Parallax -->
+<!-- Features -->
 
-  <section class="features" id="features">
-    <div class="container">
-      <h2 class="text-center">
-          Pilares
-        </h2>
+<section class="features" id="features">
+  <div class="container">
+    <h2 class="text-center">
+      Pilares
+    </h2>
 
-      <div class="row">
-        <div class="feature-col col-lg-4 col-xs-12">
-          <div class="card card-block text-center">
-            <div>
-              <div class="feature-icon">
-                <span class="fa fa-rocket"></span>
-              </div>
-            </div>
-
-            <div>
-              <h3>
-                  SINERGIA
-                </h3>
-
-              <p>
-                Entendemos que el resultado es más que la suma de las partes.
-              </p>
+    <div class="row">
+      <div class="feature-col col-lg-4 col-xs-12">
+        <div class="card card-block text-center">
+          <div>
+            <div class="feature-icon">
+              <span class="fa fa-rocket"></span>
             </div>
           </div>
-        </div>
 
-        <div class="feature-col col-lg-4 col-xs-12">
-          <div class="card card-block text-center">
-            <div>
-              <div class="feature-icon">
-                <span class="fa fa-envelope"></span>
-              </div>
-            </div>
+          <div>
+            <h3>
+              SINERGIA
+            </h3>
 
-            <div>
-              <h3>
-                  NETWORKING
-                </h3>
-
-              <p>
-                Promovemos en la comunidad la formación de equipos multidisciplinarios.
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="feature-col col-lg-4 col-xs-12">
-          <div class="card card-block text-center">
-            <div>
-              <div class="feature-icon">
-                <span class="fa fa-bell"></span>
-              </div>
-            </div>
-
-            <div>
-              <h3>
-                  INNOVACIÓN
-                </h3>
-
-              <p>
-                Creemos que las soluciones a los grandes desafíos se llegará mediante la innovación.
-              </p>
-            </div>
+            <p>
+              Entendemos que el resultado es más que la suma de las partes.
+            </p>
           </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="feature-col col-lg-4 col-xs-12">
-          <div class="card card-block text-center">
-            <div>
-              <div class="feature-icon">
-                <span class="fa fa-database"></span>
-              </div>
-            </div>
-
-            <div>
-              <h3>
-                  NUEVAS TECNOLOGÍAS
-                </h3>
-
-              <p>
-                Buscamos soluciones basadas en nuevas tecnologías y sus propuestas concretas.
-              </p>
+      <div class="feature-col col-lg-4 col-xs-12">
+        <div class="card card-block text-center">
+          <div>
+            <div class="feature-icon">
+              <span class="fa fa-envelope"></span>
             </div>
           </div>
-        </div>
 
-        <div class="feature-col col-lg-4 col-xs-12">
-          <div class="card card-block text-center">
-            <div>
-              <div class="feature-icon">
-                <span class="fa fa-cutlery"></span>
-              </div>
-            </div>
+          <div>
+            <h3>
+              NETWORKING
+            </h3>
 
-            <div>
-              <h3>
-                  INTEGRIDAD
-                </h3>
-
-              <p>
-                Realizamos evaluaciones integrales para dar con los mejores equipos y propuestas.
-              </p>
-            </div>
+            <p>
+              Promovemos en la comunidad la formación de equipos multidisciplinarios.
+            </p>
           </div>
         </div>
+      </div>
 
-        <div class="feature-col col-lg-4 col-xs-12">
-          <div class="card card-block text-center">
-            <div>
-              <div class="feature-icon">
-                <span class="fa fa-dashboard"></span>
-              </div>
+      <div class="feature-col col-lg-4 col-xs-12">
+        <div class="card card-block text-center">
+          <div>
+            <div class="feature-icon">
+              <span class="fa fa-bell"></span>
             </div>
+          </div>
 
-            <div>
-              <h3>
-                  ACCIÓN
-                </h3>
+          <div>
+            <h3>
+              INNOVACIÓN
+            </h3>
 
-              <p>
-                Sabemos que la mejor forma de hacer que las cosas sucedan es pasar a la acción.
-              </p>
-            </div>
+            <p>
+              Creemos que las soluciones a los grandes desafíos se llegará mediante la innovación.
+            </p>
           </div>
         </div>
       </div>
     </div>
-  </section>
-  <!-- /Features -->
-  <!-- Call to Action -->
 
-  <!--
+    <div class="row">
+      <div class="feature-col col-lg-4 col-xs-12">
+        <div class="card card-block text-center">
+          <div>
+            <div class="feature-icon">
+              <span class="fa fa-database"></span>
+            </div>
+          </div>
+
+          <div>
+            <h3>
+              NUEVAS TECNOLOGÍAS
+            </h3>
+
+            <p>
+              Buscamos soluciones basadas en nuevas tecnologías y sus propuestas concretas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-col col-lg-4 col-xs-12">
+        <div class="card card-block text-center">
+          <div>
+            <div class="feature-icon">
+              <span class="fa fa-cutlery"></span>
+            </div>
+          </div>
+
+          <div>
+            <h3>
+              INTEGRIDAD
+            </h3>
+
+            <p>
+              Realizamos evaluaciones integrales para dar con los mejores equipos y propuestas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="feature-col col-lg-4 col-xs-12">
+        <div class="card card-block text-center">
+          <div>
+            <div class="feature-icon">
+              <span class="fa fa-dashboard"></span>
+            </div>
+          </div>
+
+          <div>
+            <h3>
+              ACCIÓN
+            </h3>
+
+            <p>
+              Sabemos que la mejor forma de hacer que las cosas sucedan es pasar a la acción.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Features -->
+<!-- Call to Action -->
+
+<!--
     <section class="cta">
     <div class="container">
       <div class="row">
@@ -211,195 +321,206 @@
     </div>
   </section>
   -->
-  <!-- /Call to Action -->
-  <!-- Portfolio -->
+<!-- /Call to Action -->
+<!-- Portfolio -->
+<!--
+  
+<section class="portfolio" id="portfolio">
+  <div class="container text-center">
+    <h2>
+      Eventos
+    </h2>
 
-  <section class="portfolio" id="portfolio">
-    <div class="container text-center">
-      <h2>
-          Eventos
-        </h2>
+    <p>
+      Nuestros eventos más esperados del año se detallan en la siguiente lista. <b>ChallengeX_EVENTS</b>
+    </p>
+  </div>
 
-      <p>
-        Nuestros eventos más esperados del año se detallan en la siguiente lista. <b>ChallengeX_EVENTS</b>
-      </p>
-    </div>
+  <div class="portfolio-grid">
+    <div class="row">
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="card card-block">
+          <a href="#"><img alt="" src="img/porf-1.jpg">
+            <div class="portfolio-over">
+              <div>
+                <h3 class="card-title">
+                  The Dude Rockin'
+                </h3>
 
-    <div class="portfolio-grid">
-      <div class="row">
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="card card-block">
-            <a href="#"><img alt="" src="img/porf-1.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="card card-block">
-            <a href="#"><img alt="" src="img/porf-2.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="card card-block">
-            <a href="#"><img alt="" src="img/porf-3.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="card card-block">
-            <a href="#"><img alt="" src="img/porf-4.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="card card-block">
-            <a href="#"><img alt="" src="img/porf-5.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="card card-block">
-            <a href="#"><img alt="" src="img/porf-6.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="card card-block">
-            <a href="#"><img alt="" src="img/porf-7.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-sm-6 col-xs-12">
-          <div class="card card-block">
-            <a href="#"><img alt="" src="img/porf-8.jpg">
-              <div class="portfolio-over">
-                <div>
-                  <h3 class="card-title">
-                    The Dude Rockin'
-                  </h3>
-
-                  <p class="card-text">
-                    Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
-                  </p>
-                </div>
-              </div></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- /Portfolio -->
-  <!-- Team -->
-
-  <section class="team" id="team">
-    <div class="container">
-      <h2 class="text-center">
-          Países
-        </h2>
-
-      <div class="row text-center">
-        <div class="col-sm-3 col-xs-6">
-          <div class="card card-block">
-            <a href="#"><img alt="" class="team-img" src="img/team-1.png">
-              <div class="card-title-wrap">
-                <span class="card-title">COLOMBIA</span> <span class="card-text">En Crecimiento</span>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+                </p>
               </div>
+            </div>
+          </a>
+        </div>
+      </div>
 
-              <div class="team-over">
-                <h4 class="hidden-md-down">
-                  Búscanos en:
-                </h4>
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="card card-block">
+          <a href="#"><img alt="" src="img/porf-2.jpg">
+            <div class="portfolio-over">
+              <div>
+                <h3 class="card-title">
+                  The Dude Rockin'
+                </h3>
 
-                <nav class="social-nav">
-                  <a href="#"><i class="fa fa-twitter"></i></a> 
-                  <a href="#"><i class="fa fa-facebook"></i></a> 
-                  <a href="#"><i class="fa fa-linkedin"></i></a> 
-                  <a href="#"><i class="fa fa-envelope"></i></a>
-            </nav>
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
 
-            <h5 id="leadSede">
-              Hacer de un mejor COLOMBIA está en tus manos. Desafíate!
-            </h5>
-          </div>
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="card card-block">
+          <a href="#"><img alt="" src="img/porf-3.jpg">
+            <div class="portfolio-over">
+              <div>
+                <h3 class="card-title">
+                  The Dude Rockin'
+                </h3>
+
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="card card-block">
+          <a href="#"><img alt="" src="img/porf-4.jpg">
+            <div class="portfolio-over">
+              <div>
+                <h3 class="card-title">
+                  The Dude Rockin'
+                </h3>
+
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="card card-block">
+          <a href="#"><img alt="" src="img/porf-5.jpg">
+            <div class="portfolio-over">
+              <div>
+                <h3 class="card-title">
+                  The Dude Rockin'
+                </h3>
+
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="card card-block">
+          <a href="#"><img alt="" src="img/porf-6.jpg">
+            <div class="portfolio-over">
+              <div>
+                <h3 class="card-title">
+                  The Dude Rockin'
+                </h3>
+
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="card card-block">
+          <a href="#"><img alt="" src="img/porf-7.jpg">
+            <div class="portfolio-over">
+              <div>
+                <h3 class="card-title">
+                  The Dude Rockin'
+                </h3>
+
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6 col-xs-12">
+        <div class="card card-block">
+          <a href="#"><img alt="" src="img/porf-8.jpg">
+            <div class="portfolio-over">
+              <div>
+                <h3 class="card-title">
+                  The Dude Rockin'
+                </h3>
+
+                <p class="card-text">
+                  Lorem ipsum dolor sit amet, eu sed suas eruditi honestatis.
+                </p>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+-->
+<!-- /Portfolio -->
+
+<!-- Team -->
+
+<section class="team" id="team">
+  <div class="container">
+    <h2 class="text-center">
+      Equipo
+    </h2>
+
+    <div class="row text-center">
+      <div class="col-sm-3 col-xs-6">
+        <div class="card card-block">
+          <a href="#"><img alt="" class="team-img" src="img/team-1.png">
+            <div class="card-title-wrap">
+              <span class="card-title">John Mendoza</span> <span class="card-text">CEO-FOUNDER</span>
+            </div>
+
+            <div class="team-over">
+              <h4 class="hidden-md-down">
+                Búscanos en:
+              </h4>
+
+              <nav class="social-nav">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <!--<a href="#"><i class="fa fa-envelope"></i></a>-->
+              </nav>
+
+              <h5 id="leadSede">
+                Por un MUNDO mejor
+              </h5>
+            </div>
           </a>
         </div>
       </div>
@@ -407,84 +528,85 @@
       <div class="col-sm-3 col-xs-6">
         <div class="card card-block">
           <a href="#"><img alt="" class="team-img" src="img/team-2.png">
-              <div class="card-title-wrap">
-                <span class="card-title">BRASIL</span> <span class="card-text">En crecimiento</span>
-              </div>
+            <div class="card-title-wrap">
+              <span class="card-title">John Mendoza</span> <span class="card-text">CEO-FOUNDER</span>
+            </div>
 
-              <div class="team-over">
-                <h4 class="hidden-md-down">
-                  Búscanos en:
-                </h4>
+            <div class="team-over">
+              <h4 class="hidden-md-down">
+                Búscanos en:
+              </h4>
 
-                <nav class="social-nav">
-                  <a href="#"><i class="fa fa-twitter"></i></a> 
-                  <a href="#"><i class="fa fa-facebook"></i></a> 
-                  <a href="#"><i class="fa fa-linkedin"></i></a> 
-                  <a href="#"><i class="fa fa-envelope"></i></a>
-          </nav>
-
-          <h5 id="leadSede">
-            Hacer de un mejor BRASIL está en tus manos. Desafíate!
-          </h5>
-        </div>
-        </a>
-      </div>
-    </div>
-
-    <div class="col-sm-3 col-xs-6">
-      <div class="card card-block">
-        <a href="#"><img alt="" class="team-img" src="img/team-3.png">
-              <div class="card-title-wrap">
-                <span class="card-title">CHILE</span> <span class="card-text">En Crecimiento</span>
-              </div>
-
-              <div class="team-over">
-                <h4 class="hidden-md-down">
-                  Búscanos en:
-                </h4>
-
-                <nav class="social-nav">
-                  <a href="#"><i class="fa fa-twitter"></i></a> 
-                  <a href="#"><i class="fa fa-facebook"></i></a> 
-                  <a href="#"><i class="fa fa-linkedin"></i></a> 
-                  <a href="#"><i class="fa fa-envelope"></i></a>
+              <nav class="social-nav">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <!--<a href="#"><i class="fa fa-envelope"></i></a>-->
               </nav>
 
-        <h5 id="leadSede">
-          Hacer de un mejor CHILE está en tus manos. Desafíate!
-        </h5>
+              <h5 id="leadSede">
+                Por un MUNDO mejor
+              </h5>
+            </div>
+          </a>
+        </div>
       </div>
-      </a>
-    </div>
-    </div>
 
-    <div class="col-sm-3 col-xs-6">
-      <div class="card card-block">
-        <a href="#"><img alt="" class="team-img" src="img/team-4.png">
-              <div class="card-title-wrap">
-                <span class="card-title">ARGENTINA</span> <span class="card-text">En Crecimiento</span>
-              </div>
+      <div class="col-sm-3 col-xs-6">
+        <div class="card card-block">
+          <a href="#"><img alt="" class="team-img" src="img/team-3.png">
+            <div class="card-title-wrap">
+              <span class="card-title">John Mendoza</span> <span class="card-text">CEO-FOUNDER</span>
+            </div>
 
-              <div class="team-over">
-                <h4 class="hidden-md-down">
-                  Búscanos en:
-                </h4>
+            <div class="team-over">
+              <h4 class="hidden-md-down">
+                Búscanos en:
+              </h4>
 
-                <nav class="social-nav">
-                  <a href="#"><i class="fa fa-twitter"></i></a> <a href="#"><i class="fa fa-facebook"></i></a> <a href="#"><i class="fa fa-linkedin"></i></a> <a href="#"><i class="fa fa-envelope"></i></a>
-        </nav>
+              <nav class="social-nav">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <!--<a href="#"><i class="fa fa-envelope"></i></a>-->
+              </nav>
 
-        <h5 id="leadSede">
-          Hacer de un mejor ARGENTINA está en tus manos. Desafíate!
-        </h5>
+              <h5 id="leadSede">
+                Por un MUNDO mejor
+              </h5>
+            </div>
+          </a>
+        </div>
       </div>
-      </a>
-    </div>
-    </div>
-    </div>
-    </div>
-  </section>
-  <!-- /Team -->
-  <!-- @component: footer -->
 
- 
+      <div class="col-sm-3 col-xs-6">
+        <div class="card card-block">
+          <a href="#"><img alt="" class="team-img" src="img/team-4.png">
+            <div class="card-title-wrap">
+              <span class="card-title">John Mendoza</span> <span class="card-text">CEO-FOUNDER</span>
+            </div>
+
+            <div class="team-over">
+              <h4 class="hidden-md-down">
+                Búscanos en:
+              </h4>
+
+              <nav class="social-nav">
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <!--<a href="#"><i class="fa fa-envelope"></i></a>-->
+              </nav>
+
+              <h5 id="leadSede">
+                Por un MUNDO mejor
+              </h5>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- /Team -->
+<!-- @component: footer -->

@@ -32,26 +32,26 @@ router.post('/users/signup', async (req, res) => {
     errors.push({text: 'Las constraseñas deben ser mínimo de 8 caracteres.'})
   }
   if(errors.length > 0){
-    res.render('users/signup', {errors, name, email, password, confirm_password});
+    res.render('index', {errors, name, email, password, confirm_password});
   } else {
     // Look for email coincidence
     const emailUser = await User.findOne({email: email});
     if(emailUser) {
       req.flash('error_msg', 'El email ha sido registrado.');
-      res.redirect('/users/signup');
+      res.redirect('/');
     } else {
       // Saving a New User
       const newUser = new User({name, email, password});
       newUser.password = await newUser.encryptPassword(password);
       await newUser.save();
       req.flash('success_msg', 'Se ha registrado exitosamente.');
-      res.redirect('/users/signin');
+      res.redirect('/');
     }
   }
 });
 
 router.get('/users/signin', (req, res) => {
-  res.render('users/signin');
+  res.render('index');
 });
 
 router.post('/users/signin', passport.authenticate('local', {

@@ -1,62 +1,64 @@
 <!-- Page Content ================================================== -->
-  <!-- Hero -->
+<!-- Hero -->
 
+<!--
   <section class="hero">
-    <div class="container text-center">
-      <div class="row">
-        <div class="col-md-12">
-          <a class="hero-brand" href="#" title="Home"><img alt="challengex" src="/img/logo.png"></a>
-        </div>
+  <div class="container text-center">
+    <div class="row">
+      <div class="col-md-12">
+        <a class="hero-brand" href="#" title="Home"><img alt="challengex" src="/img/logo.png"></a>
       </div>
-        <div class="col-md-12">
-        <h1 id="principalText">
-            DESAFÍOS NACIONALES Y GLOBALES 
-        </h1>
-        <!--
+    </div>
+    <div class="col-md-12">
+      <h1 id="principalText">
+        DESAFÍOS NACIONALES Y GLOBALES
+      </h1>
+      
           <p class="tagline">
           This is a powerful theme with some great features that you can use in your future projects.
         </p>
-        -->
-        <a class="btn btn-full" href="#about">Empezemos</a>
-      </div>
+        
+      <a class="btn btn-full" href="#about">Empezemos</a>
     </div>
-      
+  </div>
+</section>
+-->
+<!-- /Hero -->
 
-  </section>
-  <!-- /Hero -->
+<!-- Header -->
+<header id="header">
+  <div class="container">
 
-  <!-- Header -->
-  <header id="header">
-    <div class="container">
+    <div id="logo" class="pull-left">
+      <a href="/"><img src="img/logoWeb.png" alt="" title="" /></img></a>
+      <!-- Uncomment below if you prefer to use a text image -->
+      <!--<h1><a href="#hero">Bell</a></h1>-->
+    </div>
 
-      <div id="logo" class="pull-left">
-        <a href="/"><img src="img/logoWeb.png" alt="" title="" /></img></a>
-        <!-- Uncomment below if you prefer to use a text image -->
-        <!--<h1><a href="#hero">Bell</a></h1>-->
-      </div>
-
-      <nav id="nav-menu-container">
-        <ul class="nav-menu">
-          {{#if user}}
-              <li class="list-inline-item">
-                <a href="/">Principal</a>
-              </li>
-              <li class="list-inline-item">
-                <a href="/notes">Notas</a>
-              </li>
-              <!--
+    <nav id="nav-menu-container">
+      <ul class="nav-menu">
+       
+        <!--
+          <li class="list-inline-item">
+          <a href="/">Principal</a>
+        </li>
+        <li class="list-inline-item">
+          <a href="/notes">Notas</a>
+        </li>
+        -->
+        <!--
                 <li class="list-inline-item">
                 <a href="/users/signup">Registrar</a>
               </li>
               -->
-          {{else}}
-          <li><a href="#about">ChallengeX</a></li>
-          <li><a href="#features">Pilares</a></li>
-          <li><a href="#portfolio">Eventos</a></li>
-          <li><a href="#team">Países</a></li>
-          <li><a href="/contact">Contáctanos</a></li>
-          {{/if}}
-          <!--
+       
+        <li><a href="#about">ChallengeX</a></li>
+        <li><a href="#features">Pilares</a></li>
+        <!--<li><a href="#portfolio">Eventos</a></li>-->
+        <li><a href="#team">Equipo</a></li>
+        <!--<li><a href="/contact">Contáctanos</a></li>-->
+       
+        <!--
             <li class="menu-has-children"><a href="">Drop Down</a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -75,26 +77,20 @@
             </ul>
           </li>
           -->
-        </ul>
-      </nav>
-      <!-- #nav-menu-container -->
+      </ul>
+    </nav>
+    <!-- #nav-menu-container -->
 
-      <nav class="nav social-nav pull-right d-none d-lg-inline">
-        {{#if user}}
-        <a href="https://twitter.com/JOHNMENDOZAG" target="_blank"><i class="fa fa-twitter"></i></a> 
-        <a href="https://www.facebook.com/JohnMendozaG" target="_blank"><i class="fa fa-facebook"></i></a>
-        <a href="/users/logout">Salir</a> 
-        {{else}}
-        <a href="https://twitter.com/JOHNMENDOZAG" target="_blank"><i class="fa fa-twitter"></i></a> 
-        <a href="https://www.facebook.com/JohnMendozaG" target="_blank"><i class="fa fa-facebook"></i></a>
-        <a href="/users/signin">Entrar</a> 
-        {{/if}}
-        
-        <!--
+    <nav class="nav social-nav pull-right d-none d-lg-inline">
+      <a href="https://twitter.com/JOHNMENDOZAG" target="_blank"><i class="fa fa-twitter"></i></a>
+      <a href="https://www.facebook.com/JohnMendozaG" target="_blank"><i class="fa fa-facebook"></i></a>
+      <a href="#login" target="_blank">Login</a>
+      
+      <!--
           <a href="https://www.linkedin.com/in/julioguzmancaceres/" target="_blank"><i class="fa fa-linkedin"></i></a> 
           <a href="#"><i class="fa fa-envelope"></i></a>
           -->
-      </nav>
-    </div>
-  </header>
-  <!-- #header -->
+    </nav>
+  </div>
+</header>
+<!-- #header -->

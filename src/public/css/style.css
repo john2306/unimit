@@ -5,7 +5,7 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   line-height: 1.55;
-  color: #25bafc;
+  color: #0886bd;
   font-size: 400;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
 }
@@ -46,13 +46,13 @@ a {
   background-color: rgb(234, 240, 241);
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-weight: 800;
-  color: #25bafc;
+  color: #0886bd;
   padding: 15px 45px;
   border-radius: 50px;
 }
 
 .btn:hover {
-  background-color: #25bafc;
+  background-color: #0886bd;
   color: #fff;
 }
 
@@ -67,7 +67,7 @@ a {
 
 .btn-ghost:hover {
   background-color: #fff;
-  color: #25bafc;
+  color: #0886bd;
 }
 
 section {
@@ -95,7 +95,7 @@ a:hover {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  background: #25bafc;
+  background: #0886bd;
   color: #fff;
   text-align: center;
   font-size: 24px;
@@ -164,7 +164,7 @@ a:hover {
   Header Styling
 ================================================== */
 #header {
-  background: #25bafc;
+  background: #0886bd;
   height: 70px;
 }
 
@@ -221,6 +221,64 @@ a:hover {
 
 #header .social-nav a:hover {
   color: rgba(255, 255, 255, 0.75);
+}
+
+#buttonForm {
+  border: solid 1px #0886bd;
+  color: #0886bd;
+  margin: 5px;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+#buttonForm:hover {
+  border: solid 1px #0886bd;
+  color: #fdfeff;
+  background-color: #0886bd;
+}
+
+#tituloCard {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  background: #0886bd;
+  color: #fdfeff;
+  font-size: 23px;
+  margin-bottom: 0%;
+  border: 1px solid #0886bd;
+}
+
+#tituloCard1 {
+  margin-bottom: 0px;
+}
+
+#description_card {
+  margin-bottom: 5px;
+}
+
+#email {
+  padding: 10px;
+  border: solid 1px #0886bd;
+  border-radius: 3px;
+}
+
+#pwd {
+  padding: 10px;
+  border: solid 1px #0886bd;
+  margin-bottom: 20px;
+  border-radius: 3px;
+}
+
+#bottonForm {
+  background-color: #0886bd;
+  color: #ffffff;
+  padding: 15px;
+  margin-bottom: 40px;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+label {
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
 }
 
 /*--------------------------------------------------------------
@@ -325,7 +383,7 @@ a:hover {
 }
 
 .nav-menu ul li:hover {
-  background: #25bafc;
+  background: #0886bd;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
@@ -431,11 +489,11 @@ a:hover {
 }
 
 #mobile-nav ul .menu-has-children i.fa-chevron-up {
-  color: #25bafc;
+  color: #0886bd;
 }
 
 #mobile-nav ul .menu-item-active {
-  color: #25bafc;
+  color: #0886bd;
 }
 
 #mobile-body-overly {
@@ -476,7 +534,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-weight: 500;
   color: #666;
-  border: 6px solid #25bafc;
+  border: 6px solid #0886bd;
   border-radius: 50%;
   padding: 55px 25px 0 25px;
   position: relative;
@@ -491,7 +549,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   right: -15px;
   font-family: "Raleway", Helvetica, Arial, sans-serif;
   font-size: 18px;
-  background-color: #25bafc;
+  background-color: #0886bd;
   position: absolute;
   border-radius: 50%;
   font-weight: 700;
@@ -525,7 +583,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .features h2 {
-  color: #25bafc;
+  color: #0886bd;
 }
 
 .feature-col {
@@ -546,7 +604,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   width: 70px;
   height: 70px;
   margin-bottom: 15px;
-  background: #25bafc;
+  background: #0886bd;
   color: #fff;
   font-size: 24px;
   text-align: center;
@@ -556,7 +614,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .feature-col h3 {
-  color: #25bafc;
+  color: #0886bd;
 }
 
 .feature-col p {
@@ -569,7 +627,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   Call-to-action Styling
   ================================================== */
 .cta {
-  background-color: #25bafc;
+  background-color: #0886bd;
   padding: 25px 0;
 }
 
@@ -601,7 +659,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .portfolio h2 {
-  color: #25bafc;
+  color: #0886bd;
   margin-bottom: 25px;
 }
 
@@ -667,7 +725,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   Team Styling
   ================================================== */
 .team h2 {
-  color: #25bafc;
+  color: #0886bd;
 }
 
 .team .col-sm-3 {
@@ -715,7 +773,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .team .card:hover .card-title-wrap {
-  background-color: #25bafc;
+  background-color: #0886bd;
 }
 
 .team .card:hover .card-title-wrap .card-title, .team .card:hover .card-title-wrap .card-text {
@@ -815,7 +873,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .site-footer .bottom .list-inline a:hover {
-  color: #25bafc;
+  color: #0886bd;
 }
 
 .site-footer .credits {
@@ -823,7 +881,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .site-footer .credits a {
-  color: #25bafc;
+  color: #0886bd;
 }
 
 /* ==================================================
