@@ -254,7 +254,7 @@ a:hover {
   margin-bottom: 5px;
 }
 
-#email {
+#campoForm {
   padding: 10px;
   border: solid 1px #0886bd;
   border-radius: 3px;
@@ -955,6 +955,7 @@ body.mobile-nav-active #mobile-nav-toggle {
   .site-footer .list-inline li {
     display: inline-block;
   }
+
 }
 
 @media (max-width: 767px) {

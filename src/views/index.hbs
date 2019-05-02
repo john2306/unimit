@@ -31,7 +31,7 @@
         <div class="card-body">
           <form action="/users/signin" method="POST">
             <div class="form-group">
-              <input type="email" id="email" class="form-control" name="email" placeholder="Email"
+              <input type="email" id="campoForm" class="form-control" name="email" placeholder="Email"
                 autocomplete="off" id="campo"
                 onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toLowerCase()">
             </div>
@@ -75,11 +75,11 @@
           <div class="col-md-10">
             <form action="/users/signup" method="POST">
               <div class="form-group">
-                <input type="text" id="email" class="form-control" name="name" placeholder="Name*" value="{{name}}"
+                <input type="text" id="campoForm" class="form-control" name="name" placeholder="Name*" value="{{name}}"
                   autocomplete="off">
               </div>
               <div class="form-group">
-                <input type="email" id="email" class="form-control" name="email" placeholder="Email*" value="{{email}}"
+                <input type="email" id="campoForm" class="form-control" name="email" placeholder="Email*" value="{{email}}"
                   autocomplete="off" id="campo"
                   onKeyUp="document.getElementById(this.id).value=document.getElementById(this.id).value.toLowerCase()">
               </div>
