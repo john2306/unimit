@@ -226,6 +226,7 @@ a:hover {
 #buttonForm {
   border: solid 1px #0886bd;
   color: #0886bd;
+  background-color: #f4f4f4;
   margin: 5px;
   padding: 10px;
   border-radius: 3px;
