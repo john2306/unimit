@@ -12,7 +12,7 @@ router.get('/contact', isAuthenticated, (req, res) => {
   res.render('contact');
 });
 
-router.get('/desafios', (req, res) => {
+router.get('/desafios', isAuthenticated, (req, res) => {
   res.render('desafios');
 });
 

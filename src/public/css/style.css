@@ -10,6 +10,10 @@ p {
   font-family: "Raleway", Helvetica, Arial, sans-serif;
 }
 
+#parrafoCompetition{
+  color: #000000;
+}
+
 h1 {
   font-size: 62px;
 }
