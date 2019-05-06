@@ -197,19 +197,6 @@
     </div>
   </div>
 
-
-  <script>
-    $(document).ready(function () {
-      $("#myInput").on("keyup", function () {
-        var value = $(this).val().toLowerCase();
-        $("#desafioContent").filter(function () {
-          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
-        });
-      });
-    });
-  </script>
-
-
   <style>
     .jumbotron {
       background: #1de9b6;
