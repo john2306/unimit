@@ -5,15 +5,15 @@ const router = express.Router();
 const { isAuthenticated } = require('../helpers/auth');
 
 router.get('/', (req, res) => {
-  res.render('index');
+    res.render('index');
 });
 
-router.get('/contact', isAuthenticated, (req, res) => {
-  res.render('contact');
+router.get('/contact', (req, res) => {
+    res.render('contact');
 });
 
 router.get('/desafios', isAuthenticated, (req, res) => {
-  res.render('desafios');
+    res.render('desafios');
 });
 
 module.exports = router;
