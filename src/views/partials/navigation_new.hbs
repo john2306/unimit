@@ -19,8 +19,8 @@
         </li>
         <li class="menu-has-children"><a href="#">{{user.name}}</a>
           <ul>
-            <li><a href="#">Perfil</a></li>
-            <li><a href="#">Competencias</a></li>
+            <li class="btn" id="buttonNav"><a href="#">Perfil</a></li>
+            <li class="btn" id="buttonNav"><a href="#">Competencias</a></li>
             <!--
               <li class="menu-has-children"><a href="#">Drop Down 2</a>
               <ul>
@@ -32,8 +32,8 @@
               </ul>
             </li>
             -->
-            <li><a href="#">Configuración</a></li>
-            <li><a href="/users/logout">Salir</a></li>
+            <li class="btn" id="buttonNav"><a href="#">Configuración</a></li>
+            <li class="btn" id="buttonNav"><a href="/users/logout">Salir</a></li>
             
           </ul>
         </li>
@@ -49,3 +49,10 @@
   </div>
 </header>
 <!-- #header -->
+
+<style>
+  .btn #buttonNav{
+    padding: 0%;
+    
+  }
+</style>
