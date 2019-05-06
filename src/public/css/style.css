@@ -311,7 +311,17 @@ a:hover {
     padding: 15px;
     margin-bottom: 40px;
     font-size: 16px;
-    border-radius: 3px;
+    border-radius: 30px;
+    border: 1px solid #00bfa5;
+}
+
+#bottonForm:hover{
+    background-color: #00bfa5;
+    color: #000000;
+    padding: 15px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    border-radius: 30px;
     border: 1px solid #00bfa5;
 }
 
