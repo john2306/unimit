@@ -55,7 +55,7 @@ $(document).ready(function() {
           $('#mobile-nav-toggle i').toggleClass('fa-times fa-bars');
           $('#mobile-body-overly').toggle();
       });
-
+      
       $(document).click(function (e) {
           var container = $("#mobile-nav, #mobile-nav-toggle");
           if (!container.is(e.target) && container.has(e.target).length === 0) {
@@ -115,5 +115,4 @@ $(document).ready(function() {
     }, 1000, 'easeInOutExpo');
     return false;
   });
-
 });

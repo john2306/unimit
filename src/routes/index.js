@@ -8,6 +8,10 @@ router.get('/', (req, res) => {
     res.render('index');
 });
 
+router.get('/editProfile', (req, res) => {
+    res.render('users/editProfile');
+});
+
 router.get('/contact', (req, res) => {
     res.render('contact');
 });
