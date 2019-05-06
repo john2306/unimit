@@ -39,9 +39,7 @@
             </div>
           </li>
           <li class="nav-item">
-            <form class="form-inline my-2 my-lg-0">
-              <input class="form-control mr-sm-2" type="search" placeholder="Search by countries" aria-label="Search">
-            </form>
+              <input class="form-control mr-sm-2" id="myInput" type="search" placeholder="Search by countries" aria-label="Search">
           </li>
         </ul>
         <div id="desafiosActivos">
@@ -199,6 +197,19 @@
     </div>
   </div>
 
+
+  <script>
+    $(document).ready(function () {
+      $("#myInput").on("keyup", function () {
+        var value = $(this).val().toLowerCase();
+        $("#desafioContent").filter(function () {
+          $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+        });
+      });
+    });
+  </script>
+
+
   <style>
     .jumbotron {
       background: #1de9b6;
@@ -212,6 +223,4 @@
       background-color: #1de9b6;
       color: #030303;
     }
-
-    
   </style>
