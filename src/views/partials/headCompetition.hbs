@@ -1,0 +1,63 @@
+<div class="container">
+    <div class="jumbotron m-4 p-0" id="jumbotronCompetition">
+        <div class="container">
+            <div class="mt-2">
+                <img src="/img/logoWeb.png" alt=""> <small>Factured Code Competition</small>
+            </div>
+            <div>
+                <h3 class="mt-4">Two Sigma: Using News to Predict Stock Movements</h3>
+            </div>
+            <div>
+                <h5>Use news analytics to predict stock price performance</h5>
+            </div>
+            <div>
+                <div class="mt-4 mb-2">
+                    <img src="/img/empresas/thumb76_76.png" class="rounded" alt="Organización" srcset="" width="30px"
+                        height="auto"> Two Sigma:
+                    <span><b> 600</b> equipos</span>
+                    <span> -Hace 2 meses</span>
+                </div>
+            </div>
+        </div>
+        <div id="navigation">
+            <ul class="nav nav-tabs">
+                <li class="nav-item">
+                    <a class="nav-link" href="/competitions/theme1/general">General</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/competitions/theme1/information">+Información</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/competitions/theme1/discusion">Discusión</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/competitions/theme1/rules">Reglas</a>
+                </li>
+                {{#if user.competitionInscripcion}}
+
+                {{else}}
+                <li class="nav-item">
+                    <a class="nav-link btn" id="bottonForm" data-toggle="modal" data-target="#myModal"
+                        style="margin:2px" href="#">Inscribirse</a>
+                </li>
+                {{/if}}
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!-- The Modal -->
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+
+            <!-- Modal body -->
+            <div class="modal-body text-center">
+                <p id="parrafoCompetition">By clicking on the "I understand and accept" button below, you are indicating
+                    that you agree to be bound to the <br> <a href="/competitions/theme1/rules">competition rules.</a></p>
+                <button id="bottonForm">Entiendo y Acepto la Reglas</button>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -13,9 +13,9 @@ router.get('/users/signup', (req, res) => {
 
 router.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));
 
-router.get('/auth/google/callback',
+router.get('/auth/google/callback', 
   passport.authenticate('google', { failureRedirect: '/users/signup' }),
-  function (req, res) {
+  function(req, res) {
     // Successful authentication, redirect home.
     res.redirect('/notes');
   });
@@ -25,26 +25,26 @@ router.post('/users/signup', async (req, res) => {
   let errors = [];
   const { name, email, password, confirm_password } = req.body;
 
-  if (name.length == 0) {
-    errors.push({ text: 'Ingrese un nombre.' });
+  if(name.length == 0) {
+    errors.push({text: 'Ingrese un nombre.'});
   }
-  if (password != confirm_password) {
-    errors.push({ text: 'Las contraseñas no coinciden.' });
+  if(password != confirm_password) {
+    errors.push({text: 'Las contraseñas no coinciden.'});
   }
-  if (password.length < 8) {
-    errors.push({ text: 'Las constraseñas deben ser mínimo de 8 caracteres.' })
+  if(password.length < 8) {
+    errors.push({text: 'Las constraseñas deben ser mínimo de 8 caracteres.'})
   }
-  if (errors.length > 0) {
-    res.render('index', { errors, name, email, password, confirm_password });
+  if(errors.length > 0){
+    res.render('index', {errors, name, email, password, confirm_password});
   } else {
     // Look for email coincidence
-    const emailUser = await User.findOne({ email: email });
-    if (emailUser) {
+    const emailUser = await User.findOne({email: email});
+    if(emailUser) {
       req.flash('error_msg', 'El email ha sido registrado.');
       res.redirect('/');
     } else {
       // Saving a New User
-      const newUser = new User({ name, email, password });
+      const newUser = new User({name, email, password});
       newUser.password = await newUser.encryptPassword(password);
       await newUser.save();
       req.flash('success_msg', 'Se ha registrado exitosamente.');
@@ -69,27 +69,12 @@ router.get('/users/logout', (req, res) => {
   res.redirect('/');
 });
 
-router.put('/users/update-profile/:id', isAuthenticated, async (req, res) => {
-  const { name, lastname, email, company, username, city, address, country, zipcode, aboutMe } = req.body;
-  const errors = [];
-  if (!aboutMe) {
-    errors.push({ text: 'Escribir una descripción' });
-
-  }
-  if (errors.length > 0) {
-    res.render('users/update-profile', {
-      errors,
-    });
-  } else {
-    const user = await User.findByIdAndUpdate(req.params.id, { name, lastname, email, company, username, city, address, country, zipcode, aboutMe });
-    if (user.user != req.user.id) {
-      req.flash('error_msg', 'No Autorizado');
-      return res.redirect('/desafios');
-    };
-    req.flash('success_msg', 'Perfil actualizado satisfactoriamente');
-    res.redirect('/desafios');
-  }
-  });
+router.put('/users/update-profile/:id', isAuthenticated, async(req, res) =>{
+  const {name, lastname, email, company, username, city, address, country, zipcode, aboutMe} = req.body;
+  await User.findByIdAndUpdate(req.params.id, {name, lastname, email, company, username, city, address, country, zipcode, aboutMe});
+  req.flash('success_msg', 'Perfil actualizado satisfactoriamente');
+  res.redirect('/desafios');
+});
 
 
 
