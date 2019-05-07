@@ -7,3 +7,8 @@ mongoose.connect('mongodb://john2306:qazwsx,.-UNI2014@ds147446.mlab.com:47446/no
     })
     .then(db => console.log('DB is connected'))
     .catch(err => console.error(err));
+
+    
+
+    //mongodb://john2306:qazwsx,.-UNI2014@ds147446.mlab.com:47446/node-notes-db
+    //mongodb://localhost/database-app

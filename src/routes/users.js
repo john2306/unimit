@@ -1,6 +1,9 @@
 const router = require('express').Router();
 const passport = require('passport');
 
+//helpers
+const { isAuthenticated } = require('../helpers/auth');
+
 // Models
 const User = require('../models/User');
 
@@ -65,5 +68,15 @@ router.get('/users/logout', (req, res) => {
   //req.flash('success_msg', 'Regresa pronto.');
   res.redirect('/');
 });
+
+router.put('/users/update-profile/:id', isAuthenticated, async(req, res) =>{
+  const {name, lastname, email, company, username, city, address, country, zipcode, aboutMe} = req.body;
+  const errors = [];
+  const user = await User.findByIdAndUpdate(req.params.id, {name, lastname, email, company, username, city, address, country, zipcode, aboutMe});
+  req.flash('success_msg', 'Perfil actualizado satisfactoriamente');
+  res.redirect('/desafios');
+});
+
+
 
 module.exports = router;
